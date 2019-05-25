@@ -1,0 +1,6 @@
+framework module StoriesLayout {
+  umbrella header "StoriesLayout-umbrella.h"
+
+  export *
+  module * { export * }
+}

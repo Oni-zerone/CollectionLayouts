@@ -1,0 +1,16 @@
+PODS:
+  - StoriesLayout (0.1.0)
+
+DEPENDENCIES:
+  - StoriesLayout (from `../`)
+
+EXTERNAL SOURCES:
+  StoriesLayout:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  StoriesLayout: 52cdf6c7bf5b264959a08e8b6225b0024f1b294e
+
+PODFILE CHECKSUM: ed33756638248cca8483f351eac67391da3a7bad
+
+COCOAPODS: 1.6.1
