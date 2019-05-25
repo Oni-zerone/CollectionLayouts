@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'StoriesLayout_Example' do
+  pod 'StoriesLayout', :path => '../'
+
+  target 'StoriesLayout_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
