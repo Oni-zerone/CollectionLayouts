@@ -1,4 +1,4 @@
-# StoriesLayout
+![StoriesLayout](http://studiout.it/github/StoriesLayout.png)
 
 [![CI Status](https://img.shields.io/travis/oni.zerone@gmail.com/StoriesLayout.svg?style=flat)](https://travis-ci.org/oni.zerone@gmail.com/StoriesLayout)
 [![Version](https://img.shields.io/cocoapods/v/StoriesLayout.svg?style=flat)](https://cocoapods.org/pods/StoriesLayout)
