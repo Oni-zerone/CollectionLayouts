@@ -1,0 +1,28 @@
+PODS:
+  - PowerTools (0.2.0):
+    - PowerTools/CollectionVM (= 0.2.0)
+    - PowerTools/Core (= 0.2.0)
+  - PowerTools/CollectionVM (0.2.0):
+    - PowerTools/Core
+  - PowerTools/Core (0.2.0)
+  - StoriesLayout (0.1.0)
+
+DEPENDENCIES:
+  - PowerTools (~> 0.2)
+  - StoriesLayout (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - PowerTools
+
+EXTERNAL SOURCES:
+  StoriesLayout:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  PowerTools: 945ead75a7488522ff41662f7534d02edee723a0
+  StoriesLayout: 33968e72fb20260bb218167b2f79314170ddbc82
+
+PODFILE CHECKSUM: 7cdaa77f2476a6b8cdbf5e0ff0d1815d37f17946
+
+COCOAPODS: 1.6.1

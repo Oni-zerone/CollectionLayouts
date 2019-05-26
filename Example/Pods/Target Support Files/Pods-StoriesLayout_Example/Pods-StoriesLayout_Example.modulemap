@@ -1,0 +1,6 @@
+framework module Pods_StoriesLayout_Example {
+  umbrella header "Pods-StoriesLayout_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
