@@ -44,7 +44,7 @@ public class StoriesCollectionViewLayout: UICollectionViewLayout {
     }
     
     override public func layoutAttributesForItem(at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
-        let attributes = LayoutAttributes(forCellWith: indexPath)
+        let attributes = StoriesLayoutAttributes(forCellWith: indexPath)
         guard let collection = collectionView else { return nil }
         
         attributes.frame = CGRect(x: collection.bounds.width * CGFloat(indexPath.item),
