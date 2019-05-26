@@ -5,4 +5,13 @@
 //  Created by Andrea Altea on 25/05/2019.
 //
 
-import Foundation
+import UIKit
+
+open class StoriesCollectionViewCell: UICollectionViewCell {
+    
+    override open func apply(_ layoutAttributes: UICollectionViewLayoutAttributes) {
+        super.apply(layoutAttributes)
+        guard let storiesAttributes = layoutAttributes as? StoriesLayoutAttributes else { return }
+        self.layer.anchorPoint = storiesAttributes.anchorPoint
+    }
+}

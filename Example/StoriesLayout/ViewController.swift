@@ -7,17 +7,48 @@
 //
 
 import UIKit
+import PowerTools
 
 class ViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
+    var dataSource: CollectionBinderDataSource!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+        setupCells()
+        setupDataSource()
     }
+    
+    func setupCells() {
+        collectionView.register(UINib(nibName: MyStoriesCollectionViewCell.identifier,
+                                      bundle: .main), forCellWithReuseIdentifier: MyStoriesCollectionViewCell.identifier)
+    }
+    
+    func setupDataSource() {
+        let section = ConcreteSection(items: [
+            ImageViewModel(imageNamed: "storiesLayout/001"),
+            ImageViewModel(imageNamed: "storiesLayout/002"),
+            ImageViewModel(imageNamed: "storiesLayout/003"),
+            ImageViewModel(imageNamed: "storiesLayout/004"),
+            ImageViewModel(imageNamed: "storiesLayout/005"),
+            ImageViewModel(imageNamed: "storiesLayout/006")
+            ])
+        
+        dataSource = CollectionBinderDataSource(view: collectionView, model: [section])
+     }
 }
 
+struct ConcreteSection: SectionViewModel {
+    var header: ItemViewModel?
+    
+    var items: [ItemViewModel]
+    
+    var footer: ItemViewModel?
+    
+    init(items: [ItemViewModel]) {
+        self.header = nil
+        self.items = items
+        self.footer = nil
+    }
+}
