@@ -1,11 +1,11 @@
+platform :ios, '10.0'
 use_frameworks!
 
 target 'StoriesLayout_Example' do
+  pod 'PowerTools', '~>0.2'
   pod 'StoriesLayout', :path => '../'
 
   target 'StoriesLayout_Tests' do
     inherit! :search_paths
-
-    
   end
 end
