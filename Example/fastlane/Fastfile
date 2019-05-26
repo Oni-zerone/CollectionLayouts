@@ -1,0 +1,80 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+
+  desc "Default CI lane"
+  lane :ci do
+    update_dependencies
+    pod_lint
+    test
+    coverage
+  end
+
+  desc "Update dependencies"
+  lane :update_dependencies do
+    cocoapods(
+      repo_update: true
+    )
+  end
+
+  desc  "SwiftLint linting"
+  lane :lint do
+    swiftlint(
+      mode: :lint,
+      ignore_exit_status: false
+    )
+  end
+
+  desc "Pod lib lint"
+  lane :pod_lint do
+    Dir.chdir("../..") do
+      sh("pod lib lint")
+    end
+  end
+
+  desc "Runs all the tests"
+  lane :test do
+    scan(
+      scheme: "StoriesLayout-Example",
+      device: "iPhone XS",
+      code_coverage: true
+    )
+  end
+
+  desc "Slather sends coverage to Coveralls"
+  lane :coverage do
+    slather(
+          travis: true,
+          workspace: "StoriesLayout.xcworkspace",
+          proj: "StoriesLayout.xcodeproj",
+          scheme: "StoriesLayout-Example",
+          binary_basename: "StoriesLayout",
+          source_directory: "../StoriesLayout/*",
+          simple_output: true,
+          coveralls: true
+        )
+  end
+
+  desc "Clean environment after all operations"
+  lane :clean do
+    clean_build_artifacts
+  end
+
+  after_all do |lane|
+      clean
+  end
+end
