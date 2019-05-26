@@ -20,8 +20,9 @@ open class StoriesCollectionViewCell: UICollectionViewCell {
         
         let gradientLayer = CAGradientLayer()
         gradientLayer.opacity = 0.0
-        gradientLayer.colors = [UIColor.black.withAlphaComponent(0.8).cgColor,
-                                UIColor.black.withAlphaComponent(0.1).cgColor]
+        gradientLayer.colors = [UIColor.black.cgColor,
+                                UIColor.black.withAlphaComponent(0.2).cgColor]
+        gradientLayer.actions = ["opacity": NSNull()]
         self.layer.addSublayer(gradientLayer)
         self.gradientLayer = gradientLayer
         return gradientLayer
@@ -43,7 +44,6 @@ open class StoriesCollectionViewCell: UICollectionViewCell {
                 gradientLayer.startPoint = CGPoint(x: 1.0, y: 0.5)
                 gradientLayer.endPoint = CGPoint(x: 0.0, y: 0.5)
                 gradientLayer.opacity = percent
-            print(percent)
             case .right(let percent):
                 gradientLayer.frame = self.bounds
                 gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.5)
