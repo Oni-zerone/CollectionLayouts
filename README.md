@@ -1,6 +1,6 @@
 ![StoriesLayout](http://studiout.it/github/StoriesLayout.png)
 
-[![CI Status](https://img.shields.io/travis/oni.zerone@gmail.com/CollectionLayouts.svg?style=flat)](https://travis-ci.org/oni.zerone@gmail.com/CollectionLayouts)
+[![Build Status](https://travis-ci.com/Oni-zerone/CollectionLayouts.svg?branch=develop)](https://travis-ci.com/Oni-zerone/CollectionLayouts)
 [![Coverage Status](https://coveralls.io/repos/github/Oni-zerone/CollectionLayouts/badge.svg?branch=develop)](https://coveralls.io/github/Oni-zerone/CollectionLayouts?branch=develop)
 [![Version](https://img.shields.io/cocoapods/v/StoriesLayout.svg?style=flat)](https://cocoapods.org/pods/StoriesLayout)
 [![License](https://img.shields.io/cocoapods/l/StoriesLayout.svg?style=flat)](https://cocoapods.org/pods/StoriesLayout)
