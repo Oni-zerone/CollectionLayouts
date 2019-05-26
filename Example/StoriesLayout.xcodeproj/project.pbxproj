@@ -52,7 +52,7 @@
 		9714D1E2229A8072007F3CE2 /* MyStoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyStoriesCollectionViewCell.swift; sourceTree = "<group>"; };
 		9714D1E4229A828B007F3CE2 /* MyStoriesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyStoriesCollectionViewCell.xib; sourceTree = "<group>"; };
 		9DE00C91F4AF20C749ECE19B /* Pods_StoriesLayout_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StoriesLayout_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AC1973A1C613BDFA429A12C2 /* StoriesLayout.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = StoriesLayout.podspec; path = ../StoriesLayout.podspec; sourceTree = "<group>"; };
+		AC1973A1C613BDFA429A12C2 /* StoriesLayout.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = StoriesLayout.podspec; path = ../StoriesLayout.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
