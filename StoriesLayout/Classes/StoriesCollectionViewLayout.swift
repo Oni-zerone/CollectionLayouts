@@ -61,6 +61,7 @@ public class StoriesCollectionViewLayout: UICollectionViewLayout {
             let translation = CATransform3DMakeTranslation(attributes.frame.width / -2.0, 0.0, 0.0)
             attributes.transform3D = CATransform3DConcat(rotation, translation)
             attributes.anchorPoint = CGPoint(x: 0.0, y: 0.5)
+            attributes.gradient = .left(percent: Float(rightAnimationPercentComplete))
             return attributes
         }
         
@@ -72,6 +73,7 @@ public class StoriesCollectionViewLayout: UICollectionViewLayout {
             let translation = CATransform3DMakeTranslation(attributes.frame.width / 2.0, 0.0, 0.0)
             attributes.transform3D = CATransform3DConcat(rotation, translation)
             attributes.anchorPoint = CGPoint(x: 1.0, y: 0.5)
+            attributes.gradient = .right(percent: Float(leftAnimationPercentageComplete))
             return attributes
         }
         

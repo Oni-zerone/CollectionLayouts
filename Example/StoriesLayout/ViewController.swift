@@ -8,6 +8,7 @@
 
 import UIKit
 import PowerTools
+import StoriesLayout
 
 class ViewController: UIViewController {
 
@@ -21,8 +22,8 @@ class ViewController: UIViewController {
     }
     
     func setupCells() {
-        collectionView.register(UINib(nibName: MyStoriesCollectionViewCell.identifier,
-                                      bundle: .main), forCellWithReuseIdentifier: MyStoriesCollectionViewCell.identifier)
+        collectionView.register(UINib(nibName: MyStoriesCollectionViewCell.sIdentifier,
+                                      bundle: .main), forCellWithReuseIdentifier: MyStoriesCollectionViewCell.sIdentifier)
     }
     
     func setupDataSource() {

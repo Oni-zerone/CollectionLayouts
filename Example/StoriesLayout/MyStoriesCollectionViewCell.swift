@@ -11,10 +11,10 @@ import StoriesLayout
 
 class MyStoriesCollectionViewCell: StoriesCollectionViewCell {
     
-    static let identifier = String(describing: MyStoriesCollectionViewCell.self)
+    static let sIdentifier = String(describing: MyStoriesCollectionViewCell.self)
     
     struct Descriptor: ItemViewDescriptor {
-        var reuseIdentifier: String = MyStoriesCollectionViewCell.identifier
+        var reuseIdentifier: String = MyStoriesCollectionViewCell.sIdentifier
     }
     
     @IBOutlet weak var imageView: UIImageView!

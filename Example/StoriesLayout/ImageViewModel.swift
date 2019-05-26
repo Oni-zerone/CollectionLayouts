@@ -8,6 +8,7 @@
 
 import UIKit
 import PowerTools
+import StoriesLayout
 
 protocol ImageCell {
     
