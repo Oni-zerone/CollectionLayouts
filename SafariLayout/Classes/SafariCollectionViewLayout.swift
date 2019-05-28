@@ -19,7 +19,8 @@ public class SafariCollectionViewLayout: UICollectionViewLayout {
         }
     }
     
-    var angle: CGFloat = CGFloat.pi * -0.25
+    var defaultAngle: CGFloat = CGFloat.pi * 0.2
+    var variationAngle: CGFloat = CGFloat.pi * 0.2
     
     override public var collectionViewContentSize: CGSize {
         guard let collection = collectionView,
@@ -65,11 +66,11 @@ public class SafariCollectionViewLayout: UICollectionViewLayout {
                                   width: collection.bounds.width,
                                   height: collection.bounds.height)
         
-        let tilt = (((attributes.center.y - collection.contentOffset.y) / collection.bounds.height) * 0.8) + 0.1
+        let tilt = ((collection.contentOffset.y - attributes.frame.minY) / collection.bounds.height)
         var perspective = CATransform3DIdentity
         perspective.m34 = -1/1000
         
-        let rotation = CATransform3DRotate(perspective, tilt * angle, 1.0, 0.0, 0.0)
+        let rotation = CATransform3DRotate(perspective, (tilt * variationAngle) - defaultAngle, 1.0, 0.0, 0.0)
         let translation = CATransform3DMakeTranslation(0.0, collection.bounds.height / -2, 0.0)
         attributes.transform3D = CATransform3DConcat(rotation, translation)
         attributes.anchorPoint = CGPoint(x: 0.5, y: 0.0)
