@@ -5,10 +5,12 @@ PODS:
   - PowerTools/CollectionVM (0.2.0):
     - PowerTools/Core
   - PowerTools/Core (0.2.0)
+  - SafariLayout (0.1.0)
   - StoriesLayout (0.1.0)
 
 DEPENDENCIES:
   - PowerTools (~> 0.2)
+  - SafariLayout (from `../`)
   - StoriesLayout (from `../`)
 
 SPEC REPOS:
@@ -16,13 +18,16 @@ SPEC REPOS:
     - PowerTools
 
 EXTERNAL SOURCES:
+  SafariLayout:
+    :path: "../"
   StoriesLayout:
     :path: "../"
 
 SPEC CHECKSUMS:
   PowerTools: 945ead75a7488522ff41662f7534d02edee723a0
+  SafariLayout: 81e68ae3faceaa64efe5db4dccfb469db9d72348
   StoriesLayout: 33968e72fb20260bb218167b2f79314170ddbc82
 
-PODFILE CHECKSUM: 7cdaa77f2476a6b8cdbf5e0ff0d1815d37f17946
+PODFILE CHECKSUM: a74e11d039f7afa81a5588c963c2c464d1947758
 
 COCOAPODS: 1.6.1

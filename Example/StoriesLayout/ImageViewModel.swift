@@ -25,7 +25,7 @@ struct ImageViewModel: ItemViewModel {
     }
     
     init(imageNamed name: String) {
-        self.descriptor = MyStoriesCollectionViewCell.Descriptor()
+        self.descriptor = MySafariCollectionViewCell.Descriptor() //MyStoriesCollectionViewCell.Descriptor()
         self.image = UIImage(named: name)
     }
     

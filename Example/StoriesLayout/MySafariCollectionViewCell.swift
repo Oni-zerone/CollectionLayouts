@@ -7,12 +7,33 @@
 //
 
 import UIKit
+import SafariLayout
+import PowerTools
 
 class MySafariCollectionViewCell: SafariCollectionViewCell {
 
+    @IBOutlet weak var imageView: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        self.clipsToBounds = true
+        self.layer.cornerRadius = 8.0
     }
 
+}
+
+extension MySafariCollectionViewCell {
+    
+    static let identifier = String(describing: MySafariCollectionViewCell.self)
+    
+    struct Descriptor: ItemViewDescriptor {
+        var reuseIdentifier: String = MySafariCollectionViewCell.identifier
+    }
+}
+
+extension MySafariCollectionViewCell: ImageCell {
+    
+    func set(image: UIImage) {
+        self.imageView.image = image
+    }
 }
