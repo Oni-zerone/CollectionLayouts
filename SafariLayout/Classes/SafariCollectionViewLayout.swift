@@ -68,10 +68,7 @@ public class SafariCollectionViewLayout: UICollectionViewLayout {
         let collectionOffset = self.collectionOffset
         
         let attributes = SafariCollectionViewLayoutAttributes(forCellWith: indexPath)
-        attributes.frame = CGRect(x: 0,
-                                  y: CGFloat(indexPath.item) * (collectionBounds.height / CGFloat(tabsCount)),
-                                  width: collectionBounds.width,
-                                  height: collectionBounds.height)
+        attributes.frame = frameForItem(at: indexPath)
         
         let tilt = ((collectionOffset.y - attributes.frame.minY) / collectionBounds.height)
         var perspective = CATransform3DIdentity
@@ -112,5 +109,22 @@ extension SafariCollectionViewLayout {
     
     var collectionOffset: CGPoint {
         return self.collectionView?.contentOffset ?? .zero
+    }
+    
+    func sectionInset(for section: Int) -> UIEdgeInsets {
+        guard let collection = collectionView,
+            let insets = (collection.delegate as? UICollectionViewDelegateFlowLayout)?
+            .collectionView?(collection, layout: self, insetForSectionAt: section) else {
+            return collectionView?.contentInset ?? .zero
+        }
+        return insets
+    }
+    
+    func frameForItem(at indexPath: IndexPath) -> CGRect {
+        let insets = sectionInset(for: indexPath.section)
+        return CGRect(x: insets.left,
+                      y: CGFloat(indexPath.item) * (collectionBounds.height / CGFloat(tabsCount)) + insets.top,
+                      width: collectionBounds.width - (insets.left + insets.right),
+                      height: collectionBounds.height - (insets.top + insets.bottom))
     }
 }
