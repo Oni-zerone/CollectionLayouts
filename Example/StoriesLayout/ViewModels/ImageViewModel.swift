@@ -24,8 +24,8 @@ struct ImageViewModel: ItemViewModel {
         return image.hashValue
     }
     
-    init(imageNamed name: String) {
-        self.descriptor = MySafariCollectionViewCell.Descriptor() //MyStoriesCollectionViewCell.Descriptor()
+    init(imageNamed name: String, cellDescriptor: ItemViewDescriptor) {
+        self.descriptor = cellDescriptor
         self.image = UIImage(named: name)
     }
     
