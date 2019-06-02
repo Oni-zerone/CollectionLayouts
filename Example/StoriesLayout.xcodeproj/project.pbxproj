@@ -17,6 +17,8 @@
 		9714D1E1229A800D007F3CE2 /* ImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9714D1E0229A800D007F3CE2 /* ImageViewModel.swift */; };
 		9714D1E3229A8072007F3CE2 /* MyStoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9714D1E2229A8072007F3CE2 /* MyStoriesCollectionViewCell.swift */; };
 		9714D1E5229A828B007F3CE2 /* MyStoriesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9714D1E4229A828B007F3CE2 /* MyStoriesCollectionViewCell.xib */; };
+		97BAD9DA229C77B3004FEBFA /* MySafariCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BAD9D8229C77B3004FEBFA /* MySafariCollectionViewCell.swift */; };
+		97BAD9DB229C77B3004FEBFA /* MySafariCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97BAD9D9229C77B3004FEBFA /* MySafariCollectionViewCell.xib */; };
 		C481EAE96BD6FFD93F14DE5E /* Pods_StoriesLayout_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 218798C7A9760210B7B7A29D /* Pods_StoriesLayout_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +53,9 @@
 		9714D1E0229A800D007F3CE2 /* ImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewModel.swift; sourceTree = "<group>"; };
 		9714D1E2229A8072007F3CE2 /* MyStoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyStoriesCollectionViewCell.swift; sourceTree = "<group>"; };
 		9714D1E4229A828B007F3CE2 /* MyStoriesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyStoriesCollectionViewCell.xib; sourceTree = "<group>"; };
+		97BAD9D3229C6E2C004FEBFA /* SafariLayout.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; name = SafariLayout.podspec; path = ../SafariLayout.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		97BAD9D8229C77B3004FEBFA /* MySafariCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySafariCollectionViewCell.swift; sourceTree = "<group>"; };
+		97BAD9D9229C77B3004FEBFA /* MySafariCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MySafariCollectionViewCell.xib; sourceTree = "<group>"; };
 		9DE00C91F4AF20C749ECE19B /* Pods_StoriesLayout_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StoriesLayout_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC1973A1C613BDFA429A12C2 /* StoriesLayout.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = StoriesLayout.podspec; path = ../StoriesLayout.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
@@ -160,6 +165,7 @@
 		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
+				97BAD9D3229C6E2C004FEBFA /* SafariLayout.podspec */,
 				AC1973A1C613BDFA429A12C2 /* StoriesLayout.podspec */,
 				448170AD66E5E6B58A4B83F9 /* README.md */,
 				05B2C72688297733D55B2023 /* LICENSE */,
@@ -172,6 +178,8 @@
 			children = (
 				9714D1E2229A8072007F3CE2 /* MyStoriesCollectionViewCell.swift */,
 				9714D1E4229A828B007F3CE2 /* MyStoriesCollectionViewCell.xib */,
+				97BAD9D8229C77B3004FEBFA /* MySafariCollectionViewCell.swift */,
+				97BAD9D9229C77B3004FEBFA /* MySafariCollectionViewCell.xib */,
 			);
 			name = MyStoriesCollectionViewCell;
 			sourceTree = "<group>";
@@ -229,6 +237,7 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 6RS7DS4QV5;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
@@ -268,6 +277,7 @@
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				9714D1E5229A828B007F3CE2 /* MyStoriesCollectionViewCell.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+				97BAD9DB229C77B3004FEBFA /* MySafariCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +323,7 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-StoriesLayout_Example/Pods-StoriesLayout_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/PowerTools/PowerTools.framework",
+				"${BUILT_PRODUCTS_DIR}/SafariLayout/SafariLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/StoriesLayout/StoriesLayout.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -320,6 +331,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PowerTools.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SafariLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/StoriesLayout.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,6 +372,7 @@
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				9714D1E3229A8072007F3CE2 /* MyStoriesCollectionViewCell.swift in Sources */,
+				97BAD9DA229C77B3004FEBFA /* MySafariCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,6 +518,7 @@
 			baseConfigurationReference = 3BBBFA003CBC415DF2068280 /* Pods-StoriesLayout_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6RS7DS4QV5;
 				INFOPLIST_FILE = StoriesLayout/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -521,6 +535,7 @@
 			baseConfigurationReference = 15212FA97FB8E862873999BD /* Pods-StoriesLayout_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6RS7DS4QV5;
 				INFOPLIST_FILE = StoriesLayout/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
