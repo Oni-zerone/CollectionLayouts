@@ -8,7 +8,7 @@
 
 import PowerTools
 
-class DemoRoutable: Builder<Any> {
+class DemoRoutable: Builder<UIViewController> {
     
     var layout: UICollectionViewLayout
     var descriptor: ItemViewDescriptor
@@ -18,7 +18,7 @@ class DemoRoutable: Builder<Any> {
         self.descriptor = descriptor
     }
     
-    override func build(_ context: Any) -> UIViewController? {
+    override func build(_ context: UIViewController) -> UIViewController? {
         return DemoController(layout: layout,
                               cellDescriptor: descriptor)
     }

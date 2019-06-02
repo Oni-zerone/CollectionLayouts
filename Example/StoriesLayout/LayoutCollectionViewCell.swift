@@ -28,7 +28,11 @@ extension LayoutCollectionViewCell {
     
     static let descriptor = String(describing: LayoutCollectionViewCell.self)
     
-    struct Descriptor: ItemViewDescriptor {
+    struct Descriptor: ItemViewDescriptor, GridDescriptor {
         let reuseIdentifier = LayoutCollectionViewCell.descriptor
+        
+        var ratio: ViewRatio {
+            return ViewRatio(multiplier: 0.0, constant: 60)
+        }
     }
 }

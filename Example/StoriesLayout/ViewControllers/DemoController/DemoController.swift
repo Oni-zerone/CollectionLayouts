@@ -34,11 +34,9 @@ class DemoController: UIViewController {
     init(layout: UICollectionViewLayout, cellDescriptor: ItemViewDescriptor) {
         self.layout = layout
         self.cellDescriptor = cellDescriptor
-        self.init()
-    }
-    
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        fatalError("you should not create from xib")
+        super.init(nibName: nil, bundle: nil)
+        
+        self.title = String(describing: type(of: layout.self))
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -53,21 +51,20 @@ class DemoController: UIViewController {
     }
     
     func setupCollection() {
-        let collection = UICollectionView(frame: .zero, collectionViewLayout: self.layout)
+        let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collection.translatesAutoresizingMaskIntoConstraints = false
-        self.view.addSubview(collection)
+        view.addSubview(collection)
         
-        self.view.safeAreaLayoutGuide.topAnchor.constraint(equalTo: collection.topAnchor).isActive = true
-        self.view.safeAreaLayoutGuide.leftAnchor.constraint(equalTo: collection.leftAnchor).isActive = true
-        self.view.safeAreaLayoutGuide.rightAnchor.constraint(equalTo: collection.rightAnchor).isActive = true
-        self.view.safeAreaLayoutGuide.bottomAnchor.constraint(equalTo: collection.bottomAnchor).isActive = true
+        view.safeAreaLayoutGuide.topAnchor.constraint(equalTo: collection.topAnchor).isActive = true
+        view.safeAreaLayoutGuide.leftAnchor.constraint(equalTo: collection.leftAnchor).isActive = true
+        view.safeAreaLayoutGuide.rightAnchor.constraint(equalTo: collection.rightAnchor).isActive = true
+        view.safeAreaLayoutGuide.bottomAnchor.constraint(equalTo: collection.bottomAnchor).isActive = true
+        collectionView = collection
     }
     
     func setupCells() {
-        collectionView.register(UINib(nibName: MyStoriesCollectionViewCell.sIdentifier,
-                                      bundle: .main), forCellWithReuseIdentifier: MyStoriesCollectionViewCell.sIdentifier)
-        collectionView.register(UINib(nibName: MySafariCollectionViewCell.identifier,
-                                      bundle: .main), forCellWithReuseIdentifier: MySafariCollectionViewCell.identifier)
+        collectionView.register(UINib(nibName: cellDescriptor.reuseIdentifier,
+                                      bundle: .main), forCellWithReuseIdentifier: cellDescriptor.reuseIdentifier)
     }
     
     func setupDataSource() {

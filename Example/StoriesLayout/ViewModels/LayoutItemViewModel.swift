@@ -16,8 +16,10 @@ class LayoutItemViewModel<Layout: UICollectionViewLayout>: GridItemViewModel {
     
     typealias LayoutInitializer = () -> Layout
     
-    var descriptor: ItemViewDescriptor
+    var descriptor: ItemViewDescriptor = LayoutCollectionViewCell.Descriptor()
+    
     var layoutInitializer: LayoutInitializer
+    var layoutCellDescriptor: ItemViewDescriptor
     
     private(set) var layoutName: String = {
         String(describing: Layout.self)
@@ -28,11 +30,20 @@ class LayoutItemViewModel<Layout: UICollectionViewLayout>: GridItemViewModel {
     }
     
     init(descriptor: ItemViewDescriptor, layoutInitializer: @escaping LayoutInitializer) {
-        self.descriptor = descriptor
         self.layoutInitializer = layoutInitializer
+        self.layoutCellDescriptor = descriptor
     }
     
     func setup(_ view: UIView, in containerView: UIView, at indexPath: IndexPath) {
         (view as? LayoutCell)?.setupLayoutCell(title: layoutName)
+    }
+}
+
+extension LayoutItemViewModel: BuilderContainer {
+    
+    typealias Context = Any
+    
+    func getBuilder<Context>(_ contextType: Context.Type) -> Builder<Context>? {
+        return DemoRoutable(layout: layoutInitializer(), descriptor: layoutCellDescriptor) as? Builder<Context>
     }
 }

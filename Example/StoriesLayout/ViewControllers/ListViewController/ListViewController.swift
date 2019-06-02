@@ -8,7 +8,7 @@
 
 import PowerTools
 import StoriesLayout
-//import SafariLayout
+import SafariLayout
 
 class ListViewController: UIViewController {
 
@@ -16,12 +16,13 @@ class ListViewController: UIViewController {
     var dataSource: GridCollectionDataSource!
     
     var layouts: [ItemViewModel] = [
-        LayoutItemViewModel(descriptor:LayoutCollectionViewCell.Descriptor()) { StoriesCollectionViewLayout() }//,
-//        LayoutItemViewModel(descriptor:LayoutCollectionViewCell.Descriptor()) { SafariCollectionViewLayout() }
+        LayoutItemViewModel(descriptor:MyStoriesCollectionViewCell.Descriptor()) { StoriesCollectionViewLayout() },
+        LayoutItemViewModel(descriptor:MySafariCollectionViewCell.Descriptor()) { SafariCollectionViewLayout() }
     ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setupCollection()
         setupCells()
         setupDataSource()
@@ -30,13 +31,15 @@ class ListViewController: UIViewController {
     func setupCollection() {
         let collection = UICollectionView(frame: .zero,
                                           collectionViewLayout: UICollectionViewFlowLayout())
-        collection.translatesAutoresizingMaskIntoConstraints = true
+        collection.translatesAutoresizingMaskIntoConstraints = false
+        collection.backgroundColor = .white
         view.addSubview(collection)
         
         view.topAnchor.constraint(equalTo: collection.topAnchor).isActive = true
         view.bottomAnchor.constraint(equalTo: collection.bottomAnchor).isActive = true
         view.leftAnchor.constraint(equalTo: collection.leftAnchor).isActive = true
         view.rightAnchor.constraint(equalTo: collection.rightAnchor).isActive = true
+        self.collectionView = collection
     }
     
     func setupCells() {
@@ -49,7 +52,8 @@ class ListViewController: UIViewController {
     
     func setupDataSource() {
         self.dataSource = GridCollectionDataSource(view: collectionView,
-                                                   model: [ConcreteSection(items: layouts)])
+                                                   model: [ConcreteGridSection(items: layouts)])
+        self.dataSource.interactionDelegate = self
     }
 }
 
