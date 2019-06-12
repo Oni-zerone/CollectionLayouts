@@ -9,8 +9,7 @@
 /* Begin PBXBuildFile section */
 		0F0AB0E55D9A65C7847851BA /* Pods_StoriesLayout_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DE00C91F4AF20C749ECE19B /* Pods_StoriesLayout_Tests.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
-		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
-		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
+		607FACD81AFB9204008FA782 /* DemoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* DemoController.swift */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
@@ -19,6 +18,12 @@
 		9714D1E5229A828B007F3CE2 /* MyStoriesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9714D1E4229A828B007F3CE2 /* MyStoriesCollectionViewCell.xib */; };
 		97BAD9DA229C77B3004FEBFA /* MySafariCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BAD9D8229C77B3004FEBFA /* MySafariCollectionViewCell.swift */; };
 		97BAD9DB229C77B3004FEBFA /* MySafariCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97BAD9D9229C77B3004FEBFA /* MySafariCollectionViewCell.xib */; };
+		97BAD9E422A3C920004FEBFA /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BAD9E322A3C920004FEBFA /* ListViewController.swift */; };
+		97BAD9ED22A3D03C004FEBFA /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BAD9EC22A3D03C004FEBFA /* Section.swift */; };
+		97BAD9EF22A3E984004FEBFA /* DemoRoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BAD9EE22A3E984004FEBFA /* DemoRoutable.swift */; };
+		97BAD9F122A3F20B004FEBFA /* LayoutItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BAD9F022A3F20B004FEBFA /* LayoutItemViewModel.swift */; };
+		97BAD9F522A3F646004FEBFA /* LayoutCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BAD9F322A3F646004FEBFA /* LayoutCollectionViewCell.swift */; };
+		97BAD9F622A3F646004FEBFA /* LayoutCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97BAD9F422A3F646004FEBFA /* LayoutCollectionViewCell.xib */; };
 		C481EAE96BD6FFD93F14DE5E /* Pods_StoriesLayout_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 218798C7A9760210B7B7A29D /* Pods_StoriesLayout_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,8 +47,7 @@
 		607FACD01AFB9204008FA782 /* StoriesLayout_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoriesLayout_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		607FACD71AFB9204008FA782 /* DemoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoController.swift; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* StoriesLayout_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StoriesLayout_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,6 +60,12 @@
 		97BAD9D3229C6E2C004FEBFA /* SafariLayout.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; name = SafariLayout.podspec; path = ../SafariLayout.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		97BAD9D8229C77B3004FEBFA /* MySafariCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySafariCollectionViewCell.swift; sourceTree = "<group>"; };
 		97BAD9D9229C77B3004FEBFA /* MySafariCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MySafariCollectionViewCell.xib; sourceTree = "<group>"; };
+		97BAD9E322A3C920004FEBFA /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		97BAD9EC22A3D03C004FEBFA /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		97BAD9EE22A3E984004FEBFA /* DemoRoutable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoRoutable.swift; sourceTree = "<group>"; };
+		97BAD9F022A3F20B004FEBFA /* LayoutItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutItemViewModel.swift; sourceTree = "<group>"; };
+		97BAD9F322A3F646004FEBFA /* LayoutCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutCollectionViewCell.swift; sourceTree = "<group>"; };
+		97BAD9F422A3F646004FEBFA /* LayoutCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LayoutCollectionViewCell.xib; sourceTree = "<group>"; };
 		9DE00C91F4AF20C749ECE19B /* Pods_StoriesLayout_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StoriesLayout_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC1973A1C613BDFA429A12C2 /* StoriesLayout.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = StoriesLayout.podspec; path = ../StoriesLayout.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
@@ -124,11 +134,10 @@
 		607FACD21AFB9204008FA782 /* Example for StoriesLayout */ = {
 			isa = PBXGroup;
 			children = (
+				97BAD9E722A3C988004FEBFA /* ViewModels */,
+				97BAD9E122A3C8E3004FEBFA /* ViewControllers */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
-				9714D1E0229A800D007F3CE2 /* ImageViewModel.swift */,
-				9714D1E6229A8298007F3CE2 /* MyStoriesCollectionViewCell */,
-				607FACD91AFB9204008FA782 /* Main.storyboard */,
+				9714D1E6229A8298007F3CE2 /* CollectionViewCells */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
@@ -173,15 +182,77 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
-		9714D1E6229A8298007F3CE2 /* MyStoriesCollectionViewCell */ = {
+		9714D1E6229A8298007F3CE2 /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				97BAD9F222A3F618004FEBFA /* LayoutCollectionViewCell */,
+				97BAD9E522A3C964004FEBFA /* StoriesCollectionViewCell */,
+				97BAD9E622A3C970004FEBFA /* SafariCollectionViewCell */,
+			);
+			name = CollectionViewCells;
+			sourceTree = "<group>";
+		};
+		97BAD9E122A3C8E3004FEBFA /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				97BAD9E822A3CC21004FEBFA /* ListViewController */,
+				97BAD9E922A3CC2D004FEBFA /* DemoController */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		97BAD9E522A3C964004FEBFA /* StoriesCollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
 				9714D1E2229A8072007F3CE2 /* MyStoriesCollectionViewCell.swift */,
 				9714D1E4229A828B007F3CE2 /* MyStoriesCollectionViewCell.xib */,
+			);
+			name = StoriesCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		97BAD9E622A3C970004FEBFA /* SafariCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
 				97BAD9D8229C77B3004FEBFA /* MySafariCollectionViewCell.swift */,
 				97BAD9D9229C77B3004FEBFA /* MySafariCollectionViewCell.xib */,
 			);
-			name = MyStoriesCollectionViewCell;
+			name = SafariCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		97BAD9E722A3C988004FEBFA /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				97BAD9EC22A3D03C004FEBFA /* Section.swift */,
+				9714D1E0229A800D007F3CE2 /* ImageViewModel.swift */,
+				97BAD9F022A3F20B004FEBFA /* LayoutItemViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		97BAD9E822A3CC21004FEBFA /* ListViewController */ = {
+			isa = PBXGroup;
+			children = (
+				97BAD9E322A3C920004FEBFA /* ListViewController.swift */,
+			);
+			path = ListViewController;
+			sourceTree = "<group>";
+		};
+		97BAD9E922A3CC2D004FEBFA /* DemoController */ = {
+			isa = PBXGroup;
+			children = (
+				607FACD71AFB9204008FA782 /* DemoController.swift */,
+				97BAD9EE22A3E984004FEBFA /* DemoRoutable.swift */,
+			);
+			path = DemoController;
+			sourceTree = "<group>";
+		};
+		97BAD9F222A3F618004FEBFA /* LayoutCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				97BAD9F322A3F646004FEBFA /* LayoutCollectionViewCell.swift */,
+				97BAD9F422A3F646004FEBFA /* LayoutCollectionViewCell.xib */,
+			);
+			name = LayoutCollectionViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,10 +344,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				9714D1E5229A828B007F3CE2 /* MyStoriesCollectionViewCell.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+				97BAD9F622A3F646004FEBFA /* LayoutCollectionViewCell.xib in Resources */,
 				97BAD9DB229C77B3004FEBFA /* MySafariCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -318,8 +389,6 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-StoriesLayout_Example/Pods-StoriesLayout_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/PowerTools/PowerTools.framework",
@@ -327,8 +396,6 @@
 				"${BUILT_PRODUCTS_DIR}/StoriesLayout/StoriesLayout.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PowerTools.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SafariLayout.framework",
@@ -368,10 +435,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97BAD9EF22A3E984004FEBFA /* DemoRoutable.swift in Sources */,
 				9714D1E1229A800D007F3CE2 /* ImageViewModel.swift in Sources */,
-				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				97BAD9F122A3F20B004FEBFA /* LayoutItemViewModel.swift in Sources */,
+				607FACD81AFB9204008FA782 /* DemoController.swift in Sources */,
+				97BAD9E422A3C920004FEBFA /* ListViewController.swift in Sources */,
+				97BAD9ED22A3D03C004FEBFA /* Section.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				9714D1E3229A8072007F3CE2 /* MyStoriesCollectionViewCell.swift in Sources */,
+				97BAD9F522A3F646004FEBFA /* LayoutCollectionViewCell.swift in Sources */,
 				97BAD9DA229C77B3004FEBFA /* MySafariCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -395,14 +467,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		607FACD91AFB9204008FA782 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				607FACDA1AFB9204008FA782 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		607FACDE1AFB9204008FA782 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (

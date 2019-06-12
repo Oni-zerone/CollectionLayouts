@@ -1,15 +1,15 @@
 PODS:
-  - PowerTools (0.2.0):
-    - PowerTools/CollectionVM (= 0.2.0)
-    - PowerTools/Core (= 0.2.0)
-  - PowerTools/CollectionVM (0.2.0):
+  - PowerTools (0.3.0):
+    - PowerTools/CollectionVM (= 0.3.0)
+    - PowerTools/Core (= 0.3.0)
+  - PowerTools/CollectionVM (0.3.0):
     - PowerTools/Core
-  - PowerTools/Core (0.2.0)
+  - PowerTools/Core (0.3.0)
   - SafariLayout (0.1.0)
   - StoriesLayout (0.1.0)
 
 DEPENDENCIES:
-  - PowerTools (~> 0.2)
+  - PowerTools (~> 0.3)
   - SafariLayout (from `../`)
   - StoriesLayout (from `../`)
 
@@ -24,10 +24,10 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  PowerTools: 945ead75a7488522ff41662f7534d02edee723a0
-  SafariLayout: 81e68ae3faceaa64efe5db4dccfb469db9d72348
-  StoriesLayout: 33968e72fb20260bb218167b2f79314170ddbc82
+  PowerTools: c8c15dae195d431668aef9feb79b684ea764def9
+  SafariLayout: 0efa4ddb28eca97161c3220dc93bf55dd82044d4
+  StoriesLayout: 28d3eccd89bd24122f5215d2ec7ebcc259de9e3c
 
-PODFILE CHECKSUM: a74e11d039f7afa81a5588c963c2c464d1947758
+PODFILE CHECKSUM: d0bf00e63b108958ce7b8b9d96edb753c10b957b
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.7.1
