@@ -389,8 +389,6 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-StoriesLayout_Example/Pods-StoriesLayout_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/PowerTools/PowerTools.framework",
@@ -398,8 +396,6 @@
 				"${BUILT_PRODUCTS_DIR}/StoriesLayout/StoriesLayout.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PowerTools.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SafariLayout.framework",
