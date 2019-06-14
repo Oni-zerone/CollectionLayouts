@@ -7,11 +7,26 @@
 
 import UIKit
 
+/**
+ A concrete layout object that reproduce the look and feel of the Safari tab bars.
+ 
+ The items will be shown in a single column aligned as cards with the same dimension of the screen tilted in relation to the position in the collection.
+ 
+ Actually there isn't a specific delegate to customize layout behviors of the cells.
+ */
+
 @IBDesignable
 public class SafariCollectionViewLayout: UICollectionViewLayout {
 
     private var _tabsCount: Int = 4
 
+    /**
+    The maximum number of tabs shown on the screen.
+     
+     Line spacing between the cells will be calculated based on this parameter.
+     
+     Default value of this property is 4
+    */
     @IBInspectable public var tabsCount: Int {
         set {
             _tabsCount = max(newValue, 1)
