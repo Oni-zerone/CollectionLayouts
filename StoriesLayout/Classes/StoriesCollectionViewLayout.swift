@@ -7,6 +7,13 @@
 
 import UIKit
 
+/**
+ A concrete layout object that reproduce the look and feel of the Instagram Stories layout.
+ 
+ The items will be shown in a single row, one by one with the same dimension of the screen.
+ 
+ Actually there isn't a specific delegate to customize layout behviors of the cells.
+ */
 public class StoriesCollectionViewLayout: UICollectionViewLayout {
     
     public var baseTransform: CATransform3D = {
@@ -15,6 +22,11 @@ public class StoriesCollectionViewLayout: UICollectionViewLayout {
         return transform
     }()
     
+    /**
+     Defines the contentSize of the collectionView
+     
+     Actually StoriesCollectionViewLayout can handle a single section and the cell size is determined as the same of the collection.
+     */
     override public var collectionViewContentSize: CGSize {
         guard let collectionView = collectionView,
             let dataSource = collectionView.dataSource else { return .zero }
