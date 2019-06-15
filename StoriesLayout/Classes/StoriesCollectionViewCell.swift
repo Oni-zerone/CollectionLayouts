@@ -8,6 +8,9 @@
 import UIKit
 import CoreGraphics
 
+/**
+ StoriesCollectionViewCell is a base class that you could use to create your custom cells with the Instagram Stories experience.
+ */
 open class StoriesCollectionViewCell: UICollectionViewCell {
     
     public weak var gradientLayer: CAGradientLayer?

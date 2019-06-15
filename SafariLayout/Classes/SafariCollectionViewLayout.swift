@@ -14,7 +14,6 @@ import UIKit
  
  Actually there isn't a specific delegate to customize layout behviors of the cells.
  */
-
 @IBDesignable
 public class SafariCollectionViewLayout: UICollectionViewLayout {
 
