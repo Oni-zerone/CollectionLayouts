@@ -13,7 +13,7 @@ This is a UICollectionViewLayout that reproduce the iOS Safari tabs experience,
 just use SafariCollectionViewLayout in your UICollectionView and subclass your cells from SafariCollectionViewCell!
 
 ### Installation
-* Via cocoapods:  `pod 'SafariLayout'`
+* Via cocoapods:  ```ruby pod 'SafariLayout' ```
 
 ![StoriesLayout](http://studiout.it/github/StoriesLayout.png)
 
@@ -25,4 +25,7 @@ This is a UICollectionViewLayout that reproduce the Instagram Stories experience
 just use StoriesCollectionViewLayout in your UICollectionView and subclass your cells from StoriesCollectionViewCell!
 
 ### Installation
-* Via cocoapods:  `pod 'StoriesLayout'`
+* Via cocoapods:  ```ruby pod 'StoriesLayout' ```
+
+### Usage
+You can find more info about usage in the [wiki](https://github.com/Oni-zerone/CollectionLayouts/wiki/StoriesLayout)
