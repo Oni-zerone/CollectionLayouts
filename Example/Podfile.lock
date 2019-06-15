@@ -5,8 +5,8 @@ PODS:
   - PowerTools/CollectionVM (0.3.0):
     - PowerTools/Core
   - PowerTools/Core (0.3.0)
-  - SafariLayout (0.1.0)
-  - StoriesLayout (0.1.0)
+  - SafariLayout (0.1.1)
+  - StoriesLayout (0.1.1)
 
 DEPENDENCIES:
   - PowerTools (~> 0.3)
@@ -25,8 +25,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   PowerTools: c8c15dae195d431668aef9feb79b684ea764def9
-  SafariLayout: 243bc97a21809b13f34e4f1b84f32bd5211593a9
-  StoriesLayout: 28d3eccd89bd24122f5215d2ec7ebcc259de9e3c
+  SafariLayout: ead4b2e58882f84b0ebbd32cd3255795277ac744
+  StoriesLayout: 694a3c67a705dbb8bdd6b4ce7c512fd7389d487c
 
 PODFILE CHECKSUM: d0bf00e63b108958ce7b8b9d96edb753c10b957b
 
