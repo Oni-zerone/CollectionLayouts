@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'SafariLayout'
-    s.version          = '0.1.0'
+    s.version          = '0.1.1'
     s.summary          = 'A Safari tabs like UICollectionViewLayout'
     s.swift_version    = '5.0'
     s.description      = <<-DESC
