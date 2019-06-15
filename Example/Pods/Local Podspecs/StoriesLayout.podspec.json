@@ -1,6 +1,6 @@
 {
   "name": "StoriesLayout",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "summary": "An Instagram Stories like UICollectionViewLayout",
   "swift_versions": "5.0",
   "description": "This is a UICollectionViewLayout that reproduce the Instagram Stories experience,\njust use StoriesCollectionViewLayout in your UICollectionView and subclass your cells from StoriesCollectionViewCell!",
@@ -14,7 +14,7 @@
   },
   "source": {
     "git": "https://github.com/Oni-zerone/CollectionLayouts.git",
-    "tag": "0.1.0"
+    "tag": "StoriesLayout-0.1.1"
   },
   "social_media_url": "https://twitter.com/Oni_zerone",
   "platforms": {
