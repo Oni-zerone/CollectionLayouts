@@ -37,9 +37,33 @@ public class SafariCollectionViewLayout: UICollectionViewLayout {
         }
     }
     
+    /**
+     The angle that the cell assumes at the center of the collection.
+     
+     This is the main value used to tune the cell position in the collection.
+     Define the overall orientation of the cell and the appearance in the collection.
+     
+     Default value of this property is 114 degrees.
+     */
     var defaultAngle: CGFloat = CGFloat.pi * 0.2
+    
+    /**
+     The angle variation between the top and the center of the collection.
+     
+     This is the value used to realize the tilting effect when the cell moves in the collection.
+     Define the overall orientation of the cell and the appearance in the collection.
+     
+     Default value of this property is 180 degrees.
+     */
     var variationAngle: CGFloat = CGFloat.pi * 0.2
     
+    /**
+     Defines the contentSize of the collectionView
+     
+     Actually SafariCollectionViewLayout can handle a single section and the cell size is determined as the same of the collection, but tilted.
+     
+     Line spacing between the cells is defined by the tabs count.
+     */
     override public var collectionViewContentSize: CGSize {
         guard let collection = collectionView,
             let dataSource = collection.dataSource else {
@@ -58,7 +82,7 @@ public class SafariCollectionViewLayout: UICollectionViewLayout {
         return CGSize(width: collection.bounds.width,
                       height: CGFloat(cellsCount) * (collection.bounds.height / CGFloat(_tabsCount)))
     }
-    
+
     override public func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         
         let firstVisibleItem = self.firstVisibleItem

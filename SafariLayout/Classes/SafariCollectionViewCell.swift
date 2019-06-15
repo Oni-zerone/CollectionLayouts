@@ -7,6 +7,9 @@
 
 import UIKit
 
+/**
+ SafariCollectionViewCell is a base class that you could use to create your custom cells with the tilted tab experience.
+*/
 open class SafariCollectionViewCell: UICollectionViewCell {
     
     override open func apply(_ layoutAttributes: UICollectionViewLayoutAttributes) {
