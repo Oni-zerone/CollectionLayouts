@@ -152,5 +152,4 @@ class UICollectionViewDataSourceMock: NSObject, UICollectionViewDataSource {
         collectionViewIndexPathForIndexTitleAtReceivedInvocations.append((collectionView: collectionView, title: title, index: index))
         return collectionViewIndexPathForIndexTitleAtClosure.map({ $0(collectionView, title, index) }) ?? collectionViewIndexPathForIndexTitleAtReturnValue
     }
-    
 }
