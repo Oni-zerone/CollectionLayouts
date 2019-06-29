@@ -8,5 +8,7 @@ target 'StoriesLayout_Example' do
 
   target 'StoriesLayout_Tests' do
     inherit! :search_paths
+    pod 'Quick'
+    pod 'Nimble'
   end
 end

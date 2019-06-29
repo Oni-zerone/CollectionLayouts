@@ -1,21 +1,27 @@
 PODS:
+  - Nimble (8.0.2)
   - PowerTools (0.3.0):
     - PowerTools/CollectionVM (= 0.3.0)
     - PowerTools/Core (= 0.3.0)
   - PowerTools/CollectionVM (0.3.0):
     - PowerTools/Core
   - PowerTools/Core (0.3.0)
+  - Quick (2.1.0)
   - SafariLayout (0.1.1)
   - StoriesLayout (0.1.1)
 
 DEPENDENCIES:
+  - Nimble
   - PowerTools (~> 0.3)
+  - Quick
   - SafariLayout (from `../`)
   - StoriesLayout (from `../`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Nimble
     - PowerTools
+    - Quick
 
 EXTERNAL SOURCES:
   SafariLayout:
@@ -24,10 +30,12 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
+  Nimble: 622629381bda1dd5678162f21f1368cec7cbba60
   PowerTools: c8c15dae195d431668aef9feb79b684ea764def9
+  Quick: 4be43f6634acfa727dd106bdf3929ce125ffa79d
   SafariLayout: ead4b2e58882f84b0ebbd32cd3255795277ac744
   StoriesLayout: 694a3c67a705dbb8bdd6b4ce7c512fd7389d487c
 
-PODFILE CHECKSUM: d0bf00e63b108958ce7b8b9d96edb753c10b957b
+PODFILE CHECKSUM: 309fea3f2752413a2a2904e6e028b24f0d958e2a
 
-COCOAPODS: 1.7.1
+COCOAPODS: 1.7.2
