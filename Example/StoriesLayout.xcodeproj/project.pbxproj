@@ -13,6 +13,8 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		9712426122C7850A00094CB9 /* StoriesLayoutAttributesSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9712426022C7850A00094CB9 /* StoriesLayoutAttributesSpec.swift */; };
+		9712426322C78C3400094CB9 /* StoriesCollectionViewLayoutSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9712426222C78C3400094CB9 /* StoriesCollectionViewLayoutSpec.swift */; };
+		9712426622C79B0000094CB9 /* UICollectionDataSourceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9712426522C79B0000094CB9 /* UICollectionDataSourceMock.swift */; };
 		9714D1E1229A800D007F3CE2 /* ImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9714D1E0229A800D007F3CE2 /* ImageViewModel.swift */; };
 		9714D1E3229A8072007F3CE2 /* MyStoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9714D1E2229A8072007F3CE2 /* MyStoriesCollectionViewCell.swift */; };
 		9714D1E5229A828B007F3CE2 /* MyStoriesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9714D1E4229A828B007F3CE2 /* MyStoriesCollectionViewCell.xib */; };
@@ -54,6 +56,8 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8EE375E9345A9A70ED42B794 /* Pods-StoriesLayout_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StoriesLayout_Tests.release.xcconfig"; path = "Target Support Files/Pods-StoriesLayout_Tests/Pods-StoriesLayout_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		9712426022C7850A00094CB9 /* StoriesLayoutAttributesSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesLayoutAttributesSpec.swift; sourceTree = "<group>"; };
+		9712426222C78C3400094CB9 /* StoriesCollectionViewLayoutSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesCollectionViewLayoutSpec.swift; sourceTree = "<group>"; };
+		9712426522C79B0000094CB9 /* UICollectionDataSourceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionDataSourceMock.swift; sourceTree = "<group>"; };
 		9714D1E0229A800D007F3CE2 /* ImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewModel.swift; sourceTree = "<group>"; };
 		9714D1E2229A8072007F3CE2 /* MyStoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyStoriesCollectionViewCell.swift; sourceTree = "<group>"; };
 		9714D1E4229A828B007F3CE2 /* MyStoriesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyStoriesCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -157,6 +161,7 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				9712426422C79AEA00094CB9 /* Mocks */,
 				9712425F22C7847F00094CB9 /* StoriesLayout */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
@@ -186,8 +191,17 @@
 			isa = PBXGroup;
 			children = (
 				9712426022C7850A00094CB9 /* StoriesLayoutAttributesSpec.swift */,
+				9712426222C78C3400094CB9 /* StoriesCollectionViewLayoutSpec.swift */,
 			);
 			path = StoriesLayout;
+			sourceTree = "<group>";
+		};
+		9712426422C79AEA00094CB9 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				9712426522C79B0000094CB9 /* UICollectionDataSourceMock.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		9714D1E6229A8298007F3CE2 /* CollectionViewCells */ = {
@@ -481,7 +495,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9712426622C79B0000094CB9 /* UICollectionDataSourceMock.swift in Sources */,
 				9712426122C7850A00094CB9 /* StoriesLayoutAttributesSpec.swift in Sources */,
+				9712426322C78C3400094CB9 /* StoriesCollectionViewLayoutSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
