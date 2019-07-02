@@ -23,18 +23,27 @@ class StoriesCollectionViewLayoutSpec: QuickSpec {
         
         beforeEach {
             sut = StoriesCollectionViewLayout()
-            collectionViewSize = CGRect(origin: .zero, size: CGSize(width: 320, height: 650))
-            collectionView = UICollectionView(frame: collectionViewSize,
-                                              collectionViewLayout: sut)
-            collectionView.register(StoriesCollectionViewCell.self,
-                                    forCellWithReuseIdentifier: cellIdentifier)
-            dataSource = .create(sections: 1,
-                                 items: 10,
-                                 cellIdentifier: cellIdentifier)
-            collectionView.dataSource = dataSource
         }
         
-        context("must work") {
+        context("check default values") {
+            xit("must have base transformation") {
+                expect(sut.baseTransform.m34).to(equal(1.0 / 1000))
+            }
+        }
+        
+        context("collection interaction") {
+            beforeEach {
+                collectionViewSize = CGRect(origin: .zero, size: CGSize(width: 320, height: 650))
+                collectionView = UICollectionView(frame: collectionViewSize,
+                                                  collectionViewLayout: sut)
+                collectionView.register(StoriesCollectionViewCell.self,
+                                        forCellWithReuseIdentifier: cellIdentifier)
+                dataSource = .create(sections: 1,
+                                     items: 10,
+                                     cellIdentifier: cellIdentifier)
+                collectionView.dataSource = dataSource
+            }
+            
             it("it reloads") {
                 collectionView.reloadData()
             }
