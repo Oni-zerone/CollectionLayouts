@@ -47,6 +47,92 @@ class StoriesCollectionViewLayoutSpec: QuickSpec {
             it("it reloads") {
                 collectionView.reloadData()
             }
+            
+            it("should always invalidate layout") {
+                let shouldInvalidate = sut.shouldInvalidateLayout(forBoundsChange: collectionView.bounds)
+                expect(shouldInvalidate).to(beTrue())
+            }
+            
+            it("must return first cell in default position") {
+                collectionView.contentOffset = .zero
+                let indexPath = IndexPath(item: 0, section: 0)
+                guard let attributes = sut.layoutAttributesForItem(at: indexPath) as? StoriesLayoutAttributes else {
+                    XCTFail("Should be StoruesLayoutAttributes")
+                    return
+                }
+                expect(attributes.indexPath).to(equal(indexPath))
+                expect(attributes.frame).to(equal(collectionView.bounds))
+                expect(attributes.anchorPoint).to(equal(CGPoint(x: 0.5, y: 0.5)))
+                expect(attributes.transform3D).to(equal(CATransform3DIdentity))
+            }
+            
+            it("must return first cell half folded") {
+                collectionView.contentOffset = CGPoint(x: collectionView.bounds.width / 2, y: 0)
+                let indexPath = IndexPath(item: 0, section: 0)
+                guard let attributes = sut.layoutAttributesForItem(at: indexPath) as? StoriesLayoutAttributes else {
+                    XCTFail("Should be StoruesLayoutAttributes")
+                    return
+                }
+                expect(attributes.indexPath).to(equal(indexPath))
+                expect(attributes.bounds).to(equal(CGRect(origin: .zero, size: collectionView.bounds.size)))
+                expect(attributes.anchorPoint).to(equal(CGPoint(x: 1, y: 0.5)))
+                expect(attributes.transform3D).toNot(equal(CATransform3DIdentity))
+            }
+            
+            it("must return first cell half folded") {
+                collectionView.contentOffset = CGPoint(x: -collectionView.bounds.width / 2, y: 0)
+                let indexPath = IndexPath(item: 0, section: 0)
+                guard let attributes = sut.layoutAttributesForItem(at: indexPath) as? StoriesLayoutAttributes else {
+                    fail("Should be StoruesLayoutAttributes")
+                    return
+                }
+                expect(attributes.indexPath).to(equal(indexPath))
+                expect(attributes.bounds).to(equal(CGRect(origin: .zero, size: collectionView.bounds.size)))
+                expect(attributes.anchorPoint).to(equal(CGPoint(x: 0.0, y: 0.5)))
+                expect(attributes.transform3D).toNot(equal(CATransform3DIdentity))
+            }
+
+            it("must return only first item") {
+                collectionView.contentOffset = .zero
+                guard let attributes = sut.layoutAttributesForElements(in: collectionView.bounds) as? [StoriesLayoutAttributes] else {
+                    fail("Should be StoriesLayoutAttributes")
+                    return
+                }
+                expect(attributes.count).to(equal(1))
+                expect(attributes.filter { $0.indexPath == IndexPath(item: 0, section: 0) }.count).to(equal(1))
+            }
+            
+            it("must return first and second item") {
+                collectionView.contentOffset = CGPoint(x: 10, y: 0)
+                guard let attributes = sut.layoutAttributesForElements(in: collectionView.bounds) as? [StoriesLayoutAttributes] else {
+                    fail("Should be StoriesLayoutAttributes")
+                    return
+                }
+                expect(attributes.count).to(equal(2))
+                expect(attributes.filter { $0.indexPath == IndexPath(item: 0, section: 0) }.count).to(equal(1))
+                expect(attributes.filter { $0.indexPath == IndexPath(item: 1, section: 0) }.count).to(equal(1))
+            }
+
+            it("must return only first item") {
+                collectionView.contentOffset = CGPoint(x: -10, y: 0)
+                guard let attributes = sut.layoutAttributesForElements(in: collectionView.bounds) as? [StoriesLayoutAttributes] else {
+                    fail("Should be StoriesLayoutAttributes")
+                    return
+                }
+                expect(attributes.count).to(equal(1))
+                expect(attributes.filter { $0.indexPath == IndexPath(item: 0, section: 0) }.count).to(equal(1))
+            }
+
+            it("must return only first item") {
+                collectionView.contentOffset = CGPoint(x: collectionView.bounds.width * 1.5, y: 0)
+                guard let attributes = sut.layoutAttributesForElements(in: collectionView.bounds) as? [StoriesLayoutAttributes] else {
+                    fail("Should be StoriesLayoutAttributes")
+                    return
+                }
+                expect(attributes.count).to(equal(2))
+                expect(attributes.filter { $0.indexPath == IndexPath(item: 1, section: 0) }.count).to(equal(1))
+                expect(attributes.filter { $0.indexPath == IndexPath(item: 2, section: 0) }.count).to(equal(1))
+            }
         }
     }
 }

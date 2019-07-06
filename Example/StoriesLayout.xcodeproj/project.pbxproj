@@ -18,6 +18,7 @@
 		9714D1E1229A800D007F3CE2 /* ImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9714D1E0229A800D007F3CE2 /* ImageViewModel.swift */; };
 		9714D1E3229A8072007F3CE2 /* MyStoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9714D1E2229A8072007F3CE2 /* MyStoriesCollectionViewCell.swift */; };
 		9714D1E5229A828B007F3CE2 /* MyStoriesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9714D1E4229A828B007F3CE2 /* MyStoriesCollectionViewCell.xib */; };
+		973CF20722D0BF2C00AB45D5 /* CATransform3D+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973CF20522D0BF2A00AB45D5 /* CATransform3D+Helper.swift */; };
 		97BAD9DA229C77B3004FEBFA /* MySafariCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BAD9D8229C77B3004FEBFA /* MySafariCollectionViewCell.swift */; };
 		97BAD9DB229C77B3004FEBFA /* MySafariCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97BAD9D9229C77B3004FEBFA /* MySafariCollectionViewCell.xib */; };
 		97BAD9E422A3C920004FEBFA /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BAD9E322A3C920004FEBFA /* ListViewController.swift */; };
@@ -61,6 +62,7 @@
 		9714D1E0229A800D007F3CE2 /* ImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewModel.swift; sourceTree = "<group>"; };
 		9714D1E2229A8072007F3CE2 /* MyStoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyStoriesCollectionViewCell.swift; sourceTree = "<group>"; };
 		9714D1E4229A828B007F3CE2 /* MyStoriesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyStoriesCollectionViewCell.xib; sourceTree = "<group>"; };
+		973CF20522D0BF2A00AB45D5 /* CATransform3D+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CATransform3D+Helper.swift"; sourceTree = "<group>"; };
 		97BAD9D3229C6E2C004FEBFA /* SafariLayout.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; name = SafariLayout.podspec; path = ../SafariLayout.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		97BAD9D8229C77B3004FEBFA /* MySafariCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySafariCollectionViewCell.swift; sourceTree = "<group>"; };
 		97BAD9D9229C77B3004FEBFA /* MySafariCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MySafariCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				973CF20422D0BF1200AB45D5 /* Helpers */,
 				9712426422C79AEA00094CB9 /* Mocks */,
 				9712425F22C7847F00094CB9 /* StoriesLayout */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
@@ -212,6 +215,14 @@
 				97BAD9E622A3C970004FEBFA /* SafariCollectionViewCell */,
 			);
 			name = CollectionViewCells;
+			sourceTree = "<group>";
+		};
+		973CF20422D0BF1200AB45D5 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				973CF20522D0BF2A00AB45D5 /* CATransform3D+Helper.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		97BAD9E122A3C8E3004FEBFA /* ViewControllers */ = {
@@ -498,6 +509,7 @@
 				9712426622C79B0000094CB9 /* UICollectionDataSourceMock.swift in Sources */,
 				9712426122C7850A00094CB9 /* StoriesLayoutAttributesSpec.swift in Sources */,
 				9712426322C78C3400094CB9 /* StoriesCollectionViewLayoutSpec.swift in Sources */,
+				973CF20722D0BF2C00AB45D5 /* CATransform3D+Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
