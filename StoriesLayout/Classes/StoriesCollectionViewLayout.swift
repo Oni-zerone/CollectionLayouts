@@ -46,6 +46,12 @@ public class StoriesCollectionViewLayout: UICollectionViewLayout {
             let firstItem = layoutAttributesForItem(at: IndexPath(item: itemIndex, section: 0)) {
             items.append(firstItem)
         }
+
+        if let lastBound = items.last?.bounds,
+            lastBound.width + lastBound.minX >= collectionView.bounds.width + collectionView.contentOffset.x {
+            return items
+        }
+        
         if dataSource.collectionView(collectionView, numberOfItemsInSection: 0) > (itemIndex + 1),
             let secondItem = layoutAttributesForItem(at: IndexPath(item: itemIndex + 1, section: 0) ) {
             secondItem.indexPath = IndexPath(item: itemIndex + 1, section: 0)
