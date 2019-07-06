@@ -48,6 +48,13 @@ class StoriesCollectionViewLayoutSpec: QuickSpec {
                 collectionView.reloadData()
             }
             
+            it("calculates contentSize") {
+                let numberOfItems = CGFloat(collectionView.numberOfItems(inSection: 0))
+                let contentSize = sut.collectionViewContentSize
+                expect(contentSize.height).to(equal(collectionView.bounds.height))
+                expect(contentSize.width).to(equal(collectionView.bounds.width * numberOfItems))
+            }
+            
             it("should always invalidate layout") {
                 let shouldInvalidate = sut.shouldInvalidateLayout(forBoundsChange: collectionView.bounds)
                 expect(shouldInvalidate).to(beTrue())
