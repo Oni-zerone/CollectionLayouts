@@ -63,7 +63,7 @@ platform :ios do
           proj: "StoriesLayout.xcodeproj",
           scheme: "StoriesLayout-Example",
           binary_basename: "StoriesLayout",
-          source_directory: "../StoriesLayout/*",
+          source_directory: "../StoriesLayout/*, ../SafariLayout/*",
           simple_output: true,
           coveralls: true
         )
