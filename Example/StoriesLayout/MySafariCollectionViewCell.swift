@@ -13,6 +13,7 @@ import PowerTools
 class MySafariCollectionViewCell: SafariCollectionViewCell {
 
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var label: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -35,5 +36,9 @@ extension MySafariCollectionViewCell: ImageCell {
     
     func set(image: UIImage) {
         self.imageView.image = image
+    }
+    
+    func set(index: Int) {
+        self.label.text = "\(index)"
     }
 }

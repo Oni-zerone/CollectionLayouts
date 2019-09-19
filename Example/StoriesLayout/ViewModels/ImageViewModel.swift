@@ -13,6 +13,7 @@ import StoriesLayout
 protocol ImageCell {
     
     func set(image: UIImage)
+    func set(index: Int)
 }
 
 struct ImageViewModel: ItemViewModel {
@@ -32,5 +33,6 @@ struct ImageViewModel: ItemViewModel {
     func setup(_ view: UIView, in containerView: UIView, at indexPath: IndexPath) {
         guard let image = image else { return }
         (view as? ImageCell)?.set(image: image)
+        (view as? ImageCell)?.set(index: indexPath.item)
     }
 }

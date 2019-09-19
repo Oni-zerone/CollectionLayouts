@@ -22,18 +22,40 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ewh-vA-xdU">
                         <rect key="frame" x="0.0" y="0.0" width="434" height="347"/>
                     </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mme-XX-0QY">
+                        <rect key="frame" x="0.0" y="0.0" width="434" height="37"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zWr-AN-thc">
+                                <rect key="frame" x="16" y="8" width="402" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="zWr-AN-thc" secondAttribute="bottom" constant="8" id="L3s-A8-9fl"/>
+                            <constraint firstItem="zWr-AN-thc" firstAttribute="leading" secondItem="mme-XX-0QY" secondAttribute="leading" constant="16" id="NPT-tW-Obz"/>
+                            <constraint firstAttribute="trailing" secondItem="zWr-AN-thc" secondAttribute="trailing" constant="16" id="eHD-wY-dar"/>
+                            <constraint firstItem="zWr-AN-thc" firstAttribute="top" secondItem="mme-XX-0QY" secondAttribute="top" constant="8" id="yDw-ni-5b4"/>
+                        </constraints>
+                    </view>
                 </subviews>
             </view>
             <constraints>
+                <constraint firstItem="mme-XX-0QY" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="2Lr-WA-qXc"/>
                 <constraint firstItem="ewh-vA-xdU" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="FiF-K9-8en"/>
                 <constraint firstAttribute="bottom" secondItem="ewh-vA-xdU" secondAttribute="bottom" id="dA4-my-KTd"/>
+                <constraint firstAttribute="trailing" secondItem="mme-XX-0QY" secondAttribute="trailing" id="dWH-Ut-k5A"/>
                 <constraint firstAttribute="trailing" secondItem="ewh-vA-xdU" secondAttribute="trailing" id="fdq-AP-Qmc"/>
                 <constraint firstItem="ewh-vA-xdU" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ll1-MB-GRr"/>
+                <constraint firstItem="mme-XX-0QY" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="pQl-TY-p61"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="434" height="347"/>
             <connections>
                 <outlet property="imageView" destination="ewh-vA-xdU" id="ad1-5p-hJJ"/>
+                <outlet property="label" destination="zWr-AN-thc" id="jQv-Br-NEP"/>
             </connections>
             <point key="canvasLocation" x="415.94202898550731" y="252.79017857142856"/>
         </collectionViewCell>
