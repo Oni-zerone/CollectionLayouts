@@ -50,6 +50,14 @@ class DemoController: UIViewController {
         setupDataSource()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
+            self.collectionView.showCenteredItem(at: IndexPath(item: 5, section: 0), animated: false)
+        }
+    }
+    
     func setupCollection() {
         let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collection.translatesAutoresizingMaskIntoConstraints = false
@@ -73,4 +81,14 @@ class DemoController: UIViewController {
         
         dataSource = CollectionBinderDataSource(view: collectionView, model: [section])
      }
+}
+
+extension UICollectionView {
+    
+    func showCenteredItem(at indexPath: IndexPath, animated: Bool) {
+        guard let itemAttributes = self.collectionViewLayout.layoutAttributesForItem(at: indexPath) else { return }
+        self.setContentOffset(CGPoint(x: itemAttributes.center.x - (itemAttributes.bounds.width / 2),
+                                      y: itemAttributes.center.y - (itemAttributes.bounds.height / 2)),
+                              animated: animated)
+    }
 }
