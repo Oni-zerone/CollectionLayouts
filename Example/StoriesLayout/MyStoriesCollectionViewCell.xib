@@ -22,20 +22,43 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Lla-HF-t3Z">
                         <rect key="frame" x="0.0" y="0.0" width="260" height="260"/>
                     </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Spo-n0-upp">
+                        <rect key="frame" x="0.0" y="0.0" width="260" height="37"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UuF-td-PnK">
+                                <rect key="frame" x="16" y="8" width="228" height="21"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="UuF-td-PnK" firstAttribute="leading" secondItem="Spo-n0-upp" secondAttribute="leading" constant="16" id="3OH-yV-Z98"/>
+                            <constraint firstItem="UuF-td-PnK" firstAttribute="top" secondItem="Spo-n0-upp" secondAttribute="top" constant="8" id="OI3-Rg-tKV"/>
+                            <constraint firstAttribute="bottom" secondItem="UuF-td-PnK" secondAttribute="bottom" constant="8" id="OX7-sb-fgY"/>
+                            <constraint firstAttribute="trailing" secondItem="UuF-td-PnK" secondAttribute="trailing" constant="16" id="VJ3-ix-vUG"/>
+                        </constraints>
+                    </view>
                 </subviews>
             </view>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="Lla-HF-t3Z" secondAttribute="bottom" id="2WZ-12-cho"/>
                 <constraint firstAttribute="trailing" secondItem="Lla-HF-t3Z" secondAttribute="trailing" id="6BG-Fq-av4"/>
+                <constraint firstItem="Spo-n0-upp" firstAttribute="leading" secondItem="nyV-vw-zis" secondAttribute="leading" id="6WY-c0-lee"/>
                 <constraint firstItem="Lla-HF-t3Z" firstAttribute="leading" secondItem="nyV-vw-zis" secondAttribute="leading" id="bcH-zD-Mbg"/>
+                <constraint firstItem="Spo-n0-upp" firstAttribute="top" secondItem="nyV-vw-zis" secondAttribute="top" id="c65-YC-9EG"/>
                 <constraint firstItem="Lla-HF-t3Z" firstAttribute="top" secondItem="nyV-vw-zis" secondAttribute="top" id="fcf-p0-5X0"/>
+                <constraint firstAttribute="trailing" secondItem="Spo-n0-upp" secondAttribute="trailing" id="yfj-fs-wVX"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="iUZ-J7-d69"/>
             <size key="customSize" width="260" height="260"/>
             <connections>
                 <outlet property="imageView" destination="Lla-HF-t3Z" id="ouw-mq-Z32"/>
+                <outlet property="label" destination="UuF-td-PnK" id="8v3-IU-KHa"/>
             </connections>
-            <point key="canvasLocation" x="136" y="75"/>
+            <point key="canvasLocation" x="134.78260869565219" y="75"/>
         </collectionViewCell>
     </objects>
 </document>

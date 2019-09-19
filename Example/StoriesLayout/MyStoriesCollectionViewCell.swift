@@ -18,6 +18,7 @@ class MyStoriesCollectionViewCell: StoriesCollectionViewCell {
     }
     
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var label: UILabel!
     
     override func prepareForReuse() {
         self.imageView.image = nil
@@ -28,5 +29,9 @@ extension MyStoriesCollectionViewCell: ImageCell {
     
     func set(image: UIImage) {
         self.imageView.image = image
+    }
+    
+    func set(index: Int) {
+        self.label.text = "\(index)"
     }
 }
